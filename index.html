@@ -74,12 +74,12 @@
 										<label for="priority-normal">Straniero</label>
 									</div>
 									<div class="9u 12u$(xsmall)">
-										<input type="checkbox" id="human" name="human" checked>
+										<input type="checkbox" id="human" name="human" onchange="document.getElementById('submitForm').disabled = !this.checked;">
 										<label for="human" style="font-size:75%;">Il paziente ha acconsentito al trattamento dei dati personali firmando il consenso informato. <a>STAMPA MODULO</a></label>
 									</div>
 									<div class="3u 12u$(xsmall)">
 										<ul class="actions">
-											<li><input type="submit" value="Invia" class="special" /></li>
+											<li><input type="submit" value="Invia" class="special" id="submitForm" disabled/></li>
 										</ul>
 									</div>
 								</div>
