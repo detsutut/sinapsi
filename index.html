@@ -47,7 +47,7 @@
 							<h2><a>Modulo Paziente</a></h2>
 							<p class="info">Il paziente intende iniziare un percorso / Il medico ritiene opportuno un consulto</p>
 						</header>
-						<form method="post" action="#">
+						<form onsubmit="composeEmail(false); return false;">
 								<div class="row uniform 50%">
 									<div class="12u$">
 										<label for="medIdText">Medico curante:</label>
@@ -66,16 +66,16 @@
 									</div>
 									<div class="6u 12u$(xsmall)"></div>
 									<div class="3u 12u$(xsmall)">
-										<input type="radio" id="priority-low" name="priority" checked>
-										<label for="priority-low">Italiano</label>
+										<input type="radio" id="pazIta" name="pazItalian" value="true" checked>
+										<label for="pazIta">Italiano</label>
 									</div>
 									<div class="3u 12u$(xsmall)">
-										<input type="radio" id="priority-normal" name="priority">
-										<label for="priority-normal">Straniero</label>
+										<input type="radio" id="pazNotIta" name="pazItalian" value="false">
+										<label for="pazNotIta">Straniero</label>
 									</div>
 									<div class="9u 12u$(xsmall)">
-										<input type="checkbox" id="human" name="human" onchange="document.getElementById('submitForm').disabled = !this.checked;">
-										<label for="human" style="font-size:75%;">Il paziente ha acconsentito al trattamento dei dati personali firmando il consenso informato. <a>STAMPA MODULO</a></label>
+										<input type="checkbox" id="personalData" name="personalData" onchange="document.getElementById('submitForm').disabled = !this.checked;">
+										<label for="personalData" style="font-size:75%;">Il paziente ha acconsentito al trattamento dei dati personali firmando il consenso informato. <a>STAMPA MODULO</a></label>
 									</div>
 									<div class="3u 12u$(xsmall)">
 										<ul class="actions">
@@ -157,7 +157,7 @@
 							<p class="info">Iscriviti alla nostra newsletter per saperne di più</p>
 						</header>
 						<p>Hai trovato interessanti i nostri contenuti illustrativi? Vuoi approfondire questi e altri argomenti e scoprire di più? Iscriviti alla nostra newsletter per rimanere aggiornato.</p>
-						<form class="form-inline" action="/action_page.php">
+						<form class="form-inline" onsubmit="composeEmail(true); return false;">
 							<label for="medMail">Inserisci la tua email:</label>
 							<input type="email" id="medMail" placeholder="inserisci email" name="medMail">
 							<br>
@@ -237,6 +237,7 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/customLogic.js"></script>
 
 	</body>
 </html>
