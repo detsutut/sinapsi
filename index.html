@@ -75,7 +75,9 @@
 									</div>
 									<div class="9u 12u$(xsmall)">
 										<input type="checkbox" id="personalData" name="personalData" onchange="document.getElementById('submitForm').disabled = !this.checked;">
-										<label for="personalData" style="font-size:75%;">Il paziente ha acconsentito al trattamento dei dati personali firmando il consenso informato. <a>STAMPA MODULO</a></label>
+										<label for="personalData" style="font-size:75%;">Il paziente ha acconsentito al trattamento dei dati personali firmando il consenso informato. 
+											<a onclick="printConsent();">STAMPA MODULO</a>
+										</label>
 									</div>
 									<div class="3u 12u$(xsmall)">
 										<ul class="actions">
@@ -84,6 +86,7 @@
 									</div>
 								</div>
 						</form>
+						<p id="printConsent" hidden></p>
 					</div>
 				</div>
 			</article>
@@ -237,6 +240,7 @@
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/print.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/customLogic.js"></script>

@@ -31,3 +31,20 @@ composeEmail = function (newsletterBool = false) {
         alert(JSON.stringify(emailPsico));
     }
 };
+
+printConsent = function(){
+    printConsentDOM = document.getElementById('printConsent');
+    printConsentDOM.innerText = composeConsent();
+    printConsentDOM.hidden=false;
+    printJS('printConsent', 'html');
+    printConsentDOM.hidden=true;
+}
+
+composeConsent = function(){
+    formInfo = $('form').serializeArray();
+    var name = getInfo(formInfo, "pazName");
+    var surname = getInfo(formInfo, "pazSurname");
+    var d = new Date();
+    content = "Pavia, ".concat(d.getDate(),"-",d.getMonth(),"-",d.getFullYear(),"\n\n","Il sottoscritto ",name," ",surname," da' il consenso all'invio dei suoi dati personali (nome, cognome, indirizzo email) a terzi al fine unico di ricevere informazioni, non vincolanti e una tantum, sull'inizio di un percorso di psicoterapia.\n\nFirma:");
+    return content;
+}
