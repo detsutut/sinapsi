@@ -2,13 +2,44 @@ getInfo = function (info, infoName) {
     return info.find(element => element.name == infoName).value;
 };
 
+function sendMail(email) {
+    var to = email;
+    var subject = "HTML formatted email";
+    var content = "";
+    content += "<html><body>";
+    content += "<table width='100%'><tr><td>"; // Outer table
+    content += "<table width='60%'>"; // Nested table
+    content += "<tr><td width='70%'>This is a row</td><td width='30%'>999999</td></tr>";
+    content += "<tr><td width='70%'>So is this</td><td width='30%'>9999</td></tr>";
+    content += "</table>";
+    content += "</td></tr></table>";
+    content += "</body></html>";
+var email =
+        "From: 'me'\r\n" +
+        "To: " + to + "\r\n" +
+        "Subject: " + subject + "\r\n" +
+        "Content-Type: text/html; charset='UTF-8'\r\n" +
+        "Content-Transfer-Encoding: base64\r\n\r\n" +
+        "<html><body>" +
+        content +
+        "</body></html>";
+    var base64EncodedEmail = window.btoa(email).replace(/\+/g, "-").replace(/\//g, "_");
+    var request = gapi.client.gmail.users.messages.send({
+        "userId": "me",
+        "resource": {
+            "raw": base64EncodedEmail
+        }
+    });
+    request.execute();
+}
+
 composeEmail = function (newsletterBool = false) {
     formInfo = $('form').serializeArray();
     if (!newsletterBool) {
         var emailPsico = {
             sender: "yourEmail@example.com",
             recipient: "yourEmail@example.com",
-            object: "Nuovo paziente in arrivo!",
+            subject: "Nuovo paziente in arrivo!",
             content: getInfo(formInfo, "medIdText").concat(" ha consigliato la terapia a ", getInfo(formInfo, "pazName"), " ", getInfo(formInfo, "pazSurname"), ".")
         };
         alert(JSON.stringify(emailPsico));
@@ -16,9 +47,10 @@ composeEmail = function (newsletterBool = false) {
         var emailPaz = {
             sender: "yourEmail@example.com",
             recipient: getInfo(formInfo, "pazEmail"),
-            object: "Indicazioni percorso psicoterapeutico",
+            subject: "Indicazioni percorso psicoterapeutico",
             content: "Buongiorno".concat(getInfo(formInfo, "pazName"), "!")
         };
+        window.open("mailto:".concat(emailPaz.recipient,"?subject=",emailPaz.subject,"&body=",emailPaz.body));
         alert(JSON.stringify(emailPaz));
     }
     else {
