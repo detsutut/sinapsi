@@ -21,8 +21,7 @@
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
-					<li><a href="info1.html">Contenuto Informativo 1</a></li>
-					<li><a href="info2.html">Contenuto Informativo 2</a></li>
+					<li><a href="info1.html">Perchè usare Sinapsi</a></li>
 				</ul>
 			</nav>
 
@@ -76,8 +75,8 @@
 									</div>
 									<div class="9u 12u$(xsmall)">
 										<input type="checkbox" id="personalData" name="personalData" onchange="document.getElementById('submitForm').disabled = !this.checked;">
-										<label for="personalData" style="font-size:75%;">Il paziente ha acconsentito al trattamento dei dati personali firmando il consenso informato. 
-											<a onclick="printConsent();">STAMPA MODULO</a>
+										<label for="personalData" style="font-size:75%;">Il paziente acconsente al trattamento dei dati personali come indicato all’interno dell’
+											<a onclick="modal_pz.style.display = 'block';">informativa</a>.
 										</label>
 									</div>
 									<div class="3u 12u$(xsmall)">
@@ -87,7 +86,6 @@
 									</div>
 								</div>
 						</form>
-						<p id="printConsent" hidden></p>
 					</div>
 				</div>
 			</article>
@@ -112,45 +110,29 @@
 			</article>
 
 		<!-- Info1 -->
-			<article id="info1" class="post style2">
-				<div class="image">
-					<img src="images/pic12.jpg" alt="" data-position="80% center" />
+		<article id="info1" class="post invert style2">
+			<div class="image">
+				<img src="images/perche-sinapsi.jpg" alt="" data-position="80% center" />
+			</div>
+			<div class="content">
+				<div class="inner">
+					<header>
+						<h2><a href="info1.html">Perchè Usare Sinapsi</a></h2>
+						<p class="info">Scritto da <a href="#contatti">Andrea Avondo</a> e <a href="#contatti">Giulia Monardo</a> </p>
+					</header>
+					<p>In questo breve articolo vogliamo condividere con te i principali vantaggi che puoi trarre dall’utilizzo di Sinapsi.<br>
+						Dalle ricerche condotte sugli effetti della collaborazione tra MMG e psicologi è stato rilevato che il lavoro in équipe, oltre a produrre importanti benefici per i pazienti e determinare una riduzione dei costi per il SSN, riduce il carico di lavoro del medico di base fino al 48%, aumentandone significativamente il benessere occupazionale.<br>
+						È stato dimostrato come gran parte del tempo del medico di base sia dedicato ad affrontare i problemi emotivi dei propri assistiti, spesso espressi sotto forma di sofferenza somatica o di disagio relazionale.
+					</p>
+					<ul class="actions">
+						<li><a href="info1.html" class="button alt">Continua a leggere</a></li>
+					</ul>
 				</div>
-				<div class="content">
-					<div class="inner">
-						<header>
-							<h2><a href="info1.html">Contenuto Informativo 1</a></h2>
-							<p class="info">Scritto 3 giorni fa da <a href="#contatti">A</a></p>
-						</header>
-						<p>Nullam posuere erat vel placerat rutrum. Praesent ac consectetur dui, et congue quam. Donec aliquam lacinia condimentum. Integer porta massa sapien, commodo sodales diam suscipit vitae. Aliquam quis felis sed urna semper semper. Phasellus eu scelerisque mi. Vivamus aliquam nisl libero, sit amet scelerisque ligula laoreet vel.</p>
-						<ul class="actions">
-							<li><a href="info1.html" class="button alt">Continua a leggere</a></li>
-						</ul>
-					</div>
-				</div>
-			</article>
-
-		<!-- Info2 -->
-			<article id="info2" class="post invert style2 alt">
-				<div class="image">
-					<img src="images/cont-info-2.jpeg" alt="" data-position="60% center" />
-				</div>
-				<div class="content">
-					<div class="inner">
-						<header>
-							<h2><a href="info2.html">Contenuto Informativo 2</a></h2>
-							<p class="info">Scritto 10 giorni fa da <a href="#contatti">G</a></p>
-						</header>
-						<p>Nullam posuere erat vel placerat rutrum. Praesent ac consectetur dui, et congue quam. Donec aliquam lacinia condimentum. Integer porta massa sapien, commodo sodales diam suscipit vitae. Aliquam quis felis sed urna semper semper. Phasellus eu scelerisque mi. Vivamus aliquam nisl libero, sit amet scelerisque ligula laoreet vel.</p>
-						<ul class="actions">
-							<li><a href="info2.html" class="button alt">Continua a leggere</a></li>
-						</ul>
-					</div>
-				</div>
-			</article>
+			</div>
+		</article>
 
 		<!-- Newsletter -->
-			<article id="newsletter" class="post style3">
+			<article id="newsletter" class="post style2 alt">
 				<div class="image">
 					<img src="images/newsletter.jpg" alt="" data-position="5% center" />
 				</div>
@@ -162,19 +144,28 @@
 						</header>
 						<p>Hai trovato interessanti in nostri contenuti illustrativi? Iscriviti alla newsletter per ricevere ulteriori approfondimenti psicologici creati ad hoc per il MMG e rimanere sempre aggiornato.</p>
 						<form class="form-inline" onsubmit="composeEmail(true); return false;">
-							<label for="medMail">Inserisci la tua email:</label>
-							<input type="email" id="medMail" placeholder="inserisci email" name="medMail">
-							<br>
-							<ul class="actions">
-								<li><input type="submit" value="Invia" class="special"/></li>
-							</ul>
-						  </form>
-						<ul class="actions">
+							<div class="row uniform 50%">
+								<div class="12u$">	
+									<label for="medMail">Inserisci la tua email:</label>
+									<input type="email" id="medMail" placeholder="inserisci email" name="medMail">
+								</div>
+								<div class="9u 12u$(xsmall)">
+									<input type="checkbox" id="privacyPolicy" name="privacyPolicy" onchange="document.getElementById('submitForm2').disabled = !this.checked;">
+									<label for="privacyPolicy" style="font-size:75%;">Letta la <a onclick="modal_med.style.display = 'block';">Privacy Policy</a>, acconsento a ricevere newsletter.
+									</label>
+								</div>
+								<div class="3u 12u$(xsmall)">
+									<ul class="actions">
+										<li><input type="submit" value="Invia" class="special" id="submitForm2" disabled/></li>
+									</ul>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</article>
 
-		<!-- Six -->
+		<!-- Contatti -->
 			<article id="contatti" class="post invert style3 alt">
 				<div class="content" style="width:100%;">
 					<div class="inner">
@@ -187,14 +178,14 @@
 										<div class="card" style="background-color: rgba(0,0,0,0.2)">
 												<img src="images/contact-1.jpg" alt="Avatar" style="width:100%; border-radius: 5px 5px 0 0;">
 												<div class="cont">
-													<h4><b>Dott. A&nbsp;A</b></h4>
+													<h4><b>Dott. Andrea&nbsp;Avondo</b></h4>
 													<p>Psicologo</p>
-													<p><a class="icon fa-phone"></a>&nbsp;&nbsp;+39&nbsp;0000000<br>
-														<a class="icon fa-envelope"></a>&nbsp;&nbsp;a.a@gmail.com
+													<p><a class="icon fa-phone"></a>&nbsp;&nbsp;+39&nbsp;3387420435<br>
+														<a class="icon fa-envelope"></a>&nbsp;&nbsp;andrea.avondo01@gmail.com
 													</p>	
 													<ul class="icons">
-															<li><a href="https://www.facebook.com/A" class="icon fa-facebook"><span class="label">Twitter</span></a></li>
-															<li><a href="https://www.instagram.com/a" class="icon fa-instagram"><span class="label">Facebook</span></a></li>
+															<li><a href="https://www.facebook.com/AvondoPsicologo/" class="icon fa-facebook"><span class="label">Twitter</span></a></li>
+															<li><a href="https://www.instagram.com/avondoandrea_psicologo/" class="icon fa-instagram"><span class="label">Facebook</span></a></li>
 													</ul>
 												</div>
 										</div>
@@ -203,14 +194,14 @@
 										<div class="card" style="background-color: rgba(0,0,0,0.2)">
 												<img src="images/contact-2.jpg" alt="Avatar" style="width:100%; border-radius: 5px 5px 0 0;">
 												<div class="cont">
-													<h4><b>Dott.ssa G&nbsp;M</b></h4>
+													<h4><b>Dott.ssa Giulia&nbsp;Monardo</b></h4>
 													<p>Psicologa</p>
-													<p><a class="icon fa-phone"></a>&nbsp;&nbsp;+39&nbsp;0000000<br>
-														<a class="icon fa-envelope"></a>&nbsp;&nbsp;g@gmail.com
+													<p><a class="icon fa-phone"></a>&nbsp;&nbsp;+39&nbsp;3892485531<br>
+														<a class="icon fa-envelope"></a>&nbsp;&nbsp;giulia.monardo01@gmail.com
 													</p>	
 													<ul class="icons">
-															<li><a href="https://it.linkedin.com/in/g" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-															<li><a href="https://www.instagram.com/g" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+															<li><a href="https://it.linkedin.com/in/giulia-monardo-258311115" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+															<li><a href="https://www.instagram.com/giuliamnrd/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 													</ul>
 												</div>
 										</div>
@@ -219,15 +210,15 @@
 									<div class="card" style="background-color: rgba(0,0,0,0.2)">
 											<img src="images/contact-3.jpg" alt="Avatar" style="width:100%; border-radius: 5px 5px 0 0;">
 											<div class="cont">
-												<h4><b>Dott.ssa A&nbsp;B</b></h4>
+												<h4><b>Dott.ssa Anna&nbsp;Barecka-Bocchiola</b></h4>
 												<p>Psicologa </p>
-												<p><a class="icon fa-phone"></a>&nbsp;&nbsp;+39&nbsp;0000000<br>
-													<a class="icon fa-envelope"></a>&nbsp;&nbsp;b.a@gmail.com
+												<p><a class="icon fa-phone"></a>&nbsp;&nbsp;+39&nbsp;3384693196<br>
+													<a class="icon fa-envelope"></a>&nbsp;&nbsp;bocchiola.anna@gmail.com
 												</p>											
 												</ul>
 												<ul class="icons">
-														<li><a href="https://www.a.it/" class="icon fa-globe"><span class="label">Twitter</span></a></li>
-														<li><a href="https://www.facebook.com/b/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+														<li><a href="https://www.annabocchiola.it/" class="icon fa-globe"><span class="label">Twitter</span></a></li>
+														<li><a href="https://www.facebook.com/bocchiolapsychologist/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 												</ul>
 											</div>
 									</div>
@@ -243,9 +234,9 @@
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="copyright">
-					&copy; <a href="https://www.linkedin.com/in/tbuonocore">TOMMASO BUONOCORE</a>&nbsp;-&nbsp;2020&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/tbuonocore" class="icon fa-linkedin"> <span class="label">LinkedIn</span></a>&nbsp;&nbsp;
-					<a href="https://github.com/detsutut/psimed" class="icon fa-github"><span class="label">GitHub</span></a>
-					<br> Design: <a href="https://templated.co">Templated</a>. Images: <a href="https://www.pexels.com">Pexels</a>. All rights reserved.
+					&copy; Dott. Andrea Avondo / Dott.ssa Giulia Monardo - Tutti i diritti riservati.
+					<br> Sito realizzato da: <a href="https://www.linkedin.com/in/tbuonocore">TOMMASO BUONOCORE</a>&nbsp;-&nbsp;2020&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/tbuonocore" class="icon fa-linkedin"> <span class="label">LinkedIn</span></a>&nbsp;&nbsp;
+					<a href="https://github.com/detsutut/psimed" class="icon fa-github"><span class="label">GitHub</span></a>&nbsp;&nbsp;-&nbsp;Design:&nbsp;<a href="https://templated.co">Templated.</a>
 				</div>
 			</footer>
 
@@ -256,7 +247,5 @@
 			<script src="assets/js/print.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/customLogic.js"></script>
-
 	</body>
 </html>
