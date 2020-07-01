@@ -10,6 +10,12 @@ The main page and is protected using a AES-256 encryption system based on the [c
 Sinapsi è una semplice web app statica pensata per mettere in contatto facilmente medici di base e psicologi e fornire contenuti illustrativi.
 Il contenuto è protetto da un sistema di cifratura AES-256 basato sulla libreria [crypto-js](https://github.com/brix/crypto-js) che permette di mantenere segreto il contenuto della pagina lato client criptandolo e usando la passphrase digitata dall'utente come chiave di decrittazione. 
 
+## Demo
+
+Sinapsi provides services meant to be used from trusted family doctors only and is therefore protected by password.
+
+A demo version for illustrative purposes [can be found here](https://detsutut.github.io/sinapsi/demo.html).
+
 ## Authors
 
 * **Tommaso Buonocore** - *Author and Repository Maintainer* - [GitHub](https://github.com/detsutut), [LinkedIn](https://www.linkedin.com/in/tbuonocore/)
