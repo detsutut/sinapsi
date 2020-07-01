@@ -13,6 +13,8 @@ Il contenuto è protetto da un sistema di cifratura AES-256 basato sulla libreri
 ## Authors
 
 * **Tommaso Buonocore** - *Author and Repository Maintainer* - [GitHub](https://github.com/detsutut), [LinkedIn](https://www.linkedin.com/in/tbuonocore/)
+* **Andrea Avondo** - *Copyright Owner* 
+* **Giulia Monardo** - *Copyright Owner*
 
 ## Credits
 
