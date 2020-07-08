@@ -21,6 +21,11 @@ However, it is still possible to implement some password protection using client
 
 In Sinapsi, *premium* services and contents have been embedded in the encrypted html page, so that they can be accessed and used only by trusted family doctors who owns the password.
 
+## Client-side Email Sender 
+
+Sinapsi implements a client-side email sender for follow-ups and newsletters. This service usually requires the presence of a backend server, which isn't available in static web applications like Sinapsi. 
+In order to get a server-like email sender without having an actual backend, we adapted [DWYL's solution](https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server) which uses an HTML form to send a message via email through Google App Script (see [Credits](https://github.com/detsutut/sinapsi#credits) section).
+
 ## Authors
 
 * **Tommaso Buonocore** - *Author and Repository Maintainer* - [GitHub](https://github.com/detsutut), [LinkedIn](https://www.linkedin.com/in/tbuonocore/)
@@ -30,6 +35,7 @@ In Sinapsi, *premium* services and contents have been embedded in the encrypted 
 ## Credits
 
 * [Robin Moisson](https://robinmoisson.github.io/staticrypt/) for AES-256 encryption system for static pages, based on [crypto-js](https://github.com/brix/crypto-js)
+* [DWYL](https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server) for client-side email provider implementation for static pages using [Google App Script](https://www.google.com/script/start/)
 * [Templated](https://templated.co) for the original template and design
 * [Pexels](https://www.pexels.com) for all the images that are not personally owned
 
