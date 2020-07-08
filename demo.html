@@ -22,7 +22,7 @@
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
-					<li><a onclick="alert('Funzione non disponibile in demo');">Perchè usare Sinapsi</a></li>
+					<li><a onclick="showSnackbar();">Perchè usare Sinapsi</a></li>
 				</ul>
 			</nav>
 
@@ -48,7 +48,7 @@
 							<h2><a>Modulo Invio Paziente</a></h2>
 							<p class="info">Se ritieni opportuno un consulto o se il paziente intende iniziare un percorso psicologico, compila il form sottostante</p>
 						</header>
-						<form onsubmit="alert('Funzione non disponibile in demo'); return false;">
+						<form onsubmit="showSnackbar(); return false;">
 								<div class="row uniform 50%">
 									<div class="12u$">
 										<label for="medIdText">Medico curante:</label>
@@ -77,7 +77,7 @@
 									<div class="9u 12u$(xsmall)">
 										<input type="checkbox" id="personalData" name="personalData" onchange="document.getElementById('submitForm').disabled = !this.checked;">
 										<label for="personalData" style="font-size:75%;">Il paziente acconsente al trattamento dei dati personali come indicato all’interno dell’
-											<a onclick="alert('Funzione non disponibile in demo');">informativa</a>.
+											<a onclick="showSnackbar();">informativa</a>.
 										</label>
 									</div>
 									<div class="3u 12u$(xsmall)">
@@ -118,7 +118,7 @@
 			<div class="content">
 				<div class="inner">
 					<header>
-						<h2><a onclick="alert('Funzione non disponibile in demo');">Perchè Usare Sinapsi</a></h2>
+						<h2><a onclick="showSnackbar();">Perchè Usare Sinapsi</a></h2>
 						<p class="info">Scritto da <a href="#contatti">Andrea Avondo</a> e <a href="#contatti">Giulia Monardo</a> </p>
 					</header>
 					<p>In questo breve articolo vogliamo condividere con te i principali vantaggi che puoi trarre dall’utilizzo di Sinapsi.<br>
@@ -126,7 +126,7 @@
 						È stato dimostrato come gran parte del tempo del medico di base sia dedicato ad affrontare i problemi emotivi dei propri assistiti, spesso espressi sotto forma di sofferenza somatica o di disagio relazionale.
 					</p>
 					<ul class="actions">
-						<li><a class="button alt" onclick="alert('Funzione non disponibile in demo');">Continua a leggere</a></li>
+						<li><a class="button alt" onclick="showSnackbar();">Continua a leggere</a></li>
 					</ul>
 				</div>
 			</div>
@@ -144,7 +144,7 @@
 							<p class="info">Iscriviti alla nostra newsletter per maggiori contenuti</p>
 						</header>
 						<p>Hai trovato interessanti in nostri contenuti illustrativi? Iscriviti alla newsletter per ricevere ulteriori approfondimenti psicologici creati ad hoc per il MMG e rimanere sempre aggiornato.</p>
-						<form class="form-inline" onsubmit="alert('Funzione non disponibile in demo'); return false;">
+						<form class="form-inline" onsubmit="showSnackbar(); return false;">
 							<div class="row uniform 50%">
 								<div class="12u$">	
 									<label for="medMail">Inserisci la tua email:</label>
@@ -152,7 +152,7 @@
 								</div>
 								<div class="9u 12u$(xsmall)">
 									<input type="checkbox" id="privacyPolicy" name="privacyPolicy" onchange="document.getElementById('submitForm2').disabled = !this.checked;">
-									<label for="privacyPolicy" style="font-size:75%;">Letta la <a onclick="alert('Funzione non disponibile in demo');">Privacy Policy</a>, acconsento a ricevere newsletter.
+									<label for="privacyPolicy" style="font-size:75%;">Letta la <a onclick="showSnackbar();">Privacy Policy</a>, acconsento a ricevere newsletter.
 									</label>
 								</div>
 								<div class="3u 12u$(xsmall)">
@@ -241,6 +241,8 @@
 				</div>
 			</footer>
 
+		<div id="snackbar">Funzione non disponibile in demo</div>
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -248,5 +250,13 @@
 			<script src="assets/js/print.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+			// **** SNACKBAR **** //
+			function showSnackbar () {
+				var x = document.getElementById("snackbar");
+      			x.className = "show";
+      			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+			}
+			</script>
 	</body>
 </html>
