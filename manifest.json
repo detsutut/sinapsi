@@ -1,7 +1,7 @@
 {
     "name": "Sinapsi",
     "short_name": "Sinapsi",
-    "display": "minimal-ui",
+    "display": "standalone",
     "start_url": "index.html?launcher=true",
     "theme_color": "#673ab6",
     "background_color": "#111111",
