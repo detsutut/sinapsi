@@ -2618,7 +2618,7 @@
 	}
 
 	header p {
-		color: #bbb;
+		color: #808080;
 	}
 
 /* Table */
@@ -4051,7 +4051,7 @@
 				}
 
 					.post.style1.invert .content header p {
-						color: rgba(255, 255, 255, 0.5);
+						color: rgba(255, 255, 255, 0.7);
 						border-top: 1px solid rgba(255, 255, 255, 0.25);
 						border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 					}
