@@ -1,20 +1,20 @@
 {
-    "name": "Sinapsi",
-    "short_name": "Sinapsi",
-    "display": "standalone",
-    "start_url": "https://detsutut.github.io/sinapsi/index.html",
-    "theme_color": "#3498db",
-    "background_color": "#3498db",
-    "icons": [
-      {
-        "src": "images/icon-96.png",
-        "sizes": "96x96",
-        "type": "image/png"
-      },
-      {
-        "src": "images/icon-144.png",
-        "sizes": "144x144",
-        "type": "image/png"
-      }
-    ]
-  }
+  "name": "Sinapsi",
+  "short_name": "Sinapsi",
+  "display": "fullscreen",
+  "start_url": "https://detsutut.github.io/sinapsi/index.html",
+  "theme_color": "#1c1c1c",
+  "background_color": "#1c1c1c",
+  "icons": [
+    {
+      "src": "images/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ]
+}
