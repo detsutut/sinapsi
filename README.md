@@ -69,9 +69,8 @@ In order to get a server-like email sender without having an actual backend, we 
 
 ## Authors
 
-* **Tommaso Buonocore** - *Author and Repository Maintainer* - [GitHub](https://github.com/detsutut), [LinkedIn](https://www.linkedin.com/in/tbuonocore/)
-* **Andrea Avondo** - *Copyright Owner* 
-* **Giulia Monardo** - *Copyright Owner*
+* **Tommaso Buonocore** - *Author, Copyright Owner, and Repository Maintainer* - [GitHub](https://github.com/detsutut), [LinkedIn](https://www.linkedin.com/in/tbuonocore/)
+* **Dott. A.V.** and **Dott. G.M.**, a.k.a. Mario Rossi and Maria Verdi - *Authors, Content writers* 
 
 ## Credits
 
