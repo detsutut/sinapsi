@@ -2,7 +2,7 @@
   "name": "Sinapsi",
   "short_name": "Sinapsi",
   "display": "fullscreen",
-  "start_url": "https://detsutut.github.io/sinapsi/index.html",
+  "start_url": "https://detsutut.github.io/sinapsi/demo.html",
   "theme_color": "#1c1c1c",
   "background_color": "#1c1c1c",
   "icons": [
